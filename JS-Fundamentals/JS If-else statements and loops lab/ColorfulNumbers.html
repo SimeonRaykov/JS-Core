@@ -1,0 +1,36 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>document</title>
+</head>
+
+<body>
+    <script>
+        function colorfulNums(num) {
+
+            let xScript = "<ul>";
+           
+
+            for (let index = 1; index <= num; index++) {
+
+            let color = "green";
+                if (index % 2 == 0) {
+                    color = "blue";
+                }
+                xScript +=`<li><span style='color:${color}'>${index}</span></li>`
+
+            }
+
+            xScript += "</ul>";
+            return xScript;
+        }
+        document.write(colorfulNums(10));
+       
+    </script>
+   
+</body>
+
+</html>

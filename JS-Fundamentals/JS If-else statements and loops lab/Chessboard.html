@@ -1,0 +1,40 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        function chessboard(number) {
+
+
+            let html = `<div class="chessboard">\n`
+                   
+            for (let i = 1; i <= number; i++) {
+                html += "<div>\n"
+                        let color = (i%2==0)?"white":"black";
+                for (let index = 1; index <= number; index++) {
+
+
+                    
+                    html += `<span class="${color}"></span>\n`
+                  color=(color==="white")?"black":"white";
+                  
+
+                }    
+                html += "</div>\n"
+            }
+            html += "</div>"
+            return html;
+        }
+        document.write(chessboard(3));
+    </script>
+
+</body>
+
+</html>
